@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SyndaTech</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
+</head>
+<body>
+    <section class="header-section">
+        <div class="container">
+            <header class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="images/synda.png" alt=" logo"></a>
+                </div>
+                <nav>
+                    <ul id="menuItems">
+                        <li><a href="index.html">Acceuil</a></li>
+                        <li><a href="produits.html">Produits</a></li>
+                        <li><a href="about.html">Apropos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="authentification.html">Accout</a></li>
+                    </ul>
+                    <img src="images/menu.png" alt="menu" width="26px" class="menu-icon" onclick="toogleButton()">
+                </nav>
+            </header>
+
+            <div class="row">
+                <div class="col-2">
+                    <img src="images/kisspng-computer-programming-programmer-clip-art-coder-png-file-5a77bb466e96c2.360686441517796166453.png" alt="Grand logo">
+                </div>
+                <div class="col-2">
+                    <div class="form-container">
+                        <div class="form-button">
+                            <span onclick="connexionFonction()">Connexion</span>
+                            <span onclick="inscriptionFonction()">Inscription</span>
+                            <hr id="Indicateur">
+                        </div>
+                        <form id="Connexion">
+                            <input type="email" placeholder="votre email">
+                            <input type="password" placeholder="votre mot de passe">
+                            <input type="submit" value="Connexion" class="form-btn">
+                            <a href="">mot de passe oublier?</a>
+                        </form>
+                        <form id="Inscription">
+                            <input type="text" placeholder="votre nom">
+                            <input type="email" placeholder="votre email">
+                            <input type="password" placeholder="votre mot de passe">
+                            <input type="submit" value="Inscription" class="form-btn">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- footer de la page -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer">
+                <p>By Foko_Junior.</p>
+                <ul class="socials">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://wa.me/690713130"><i class="fa fa-whatsapp"></i></a></li>
+                    <li><a href="#"><i class="fa fa-telegram"></i></a></li>
+                    <li><a href="#"><i class="fa fa-github"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                </ul>
+            </div>
+            <hr>
+            <p class="copyright">Copyrigth &copy; junior 2023</p>
+        </div>
+    </footer>
+
+    <!-- javascript code -->
+    <script>
+        var menuItems = document.getElementById('menuItems');
+
+        menuItems.style.maxHeight = '0px';
+        menuItems.style.padding   = '0px';
+
+        function toogleButton(){
+            if(menuItems.style.maxHeight == '0px'){
+                menuItems.style.maxHeight = '200px';
+                menuItems.style.padding   = '15px';
+            }else{
+                menuItems.style.maxHeight = '0px';
+                menuItems.style.padding   = '0px';
+            }
+        }
+    </script>
+    <!-- script code pour le form toggle -->
+    <script>
+        var connexion = document.getElementById('Connexion');
+        var inscription = document.getElementById('Inscription');
+        var indicateur = document.getElementById('Indicateur');
+
+        function connexionFonction(){
+            connexion.style.transform = 'translateX(300px)';
+            inscription.style.transform = 'translateX(300px)';
+            indicateur.style.transform = 'translateX(0px)';
+        }
+
+        function inscriptionFonction(){
+            connexion.style.transform = 'translateX(0px)';
+            inscription.style.transform = 'translateX(0px)';
+            indicateur.style.transform = 'translateX(130px)';
+        }
+
+    </script>
+</body>
+</html>

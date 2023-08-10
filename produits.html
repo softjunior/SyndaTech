@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SyndaTech</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" />
+</head>
+<body>
+    <section class="header-section">
+        <div class="container">
+            <header class="navbar">
+                <div class="logo">
+                    <a href="index.html"><img src="images/synda.png" alt="logo"></a>
+                </div>
+                <nav>
+                    <ul id="menuItems">
+                        <li><a href="index.html">Acceuil</a></li>
+                        <li><a href="produits.html">Service</a></li>
+                        <li><a href="about.html">Apropos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="authentification.html">Accout</a></li>
+                    </ul>
+                    <img src="images/menu.png" alt="menu" width="26px" class="menu-icon" onclick="toogleButton()">
+                </nav>
+            </header>
+        </div>
+    </section>
+
+    <!-- meilleurs produits -->
+    <section class="featured-products">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <img src="images/webde.jpeg" alt="service 1"></img>
+                    <h3>Developpement Web</h3>
+                </div>
+                <div class="col-4">
+                    <img src="images/appdev.jpeg" alt="service 2">
+                    <h3>App Development</h3>
+                </div>
+                <div class="col-4">
+                    <img src="images/télécharger.jpeg" alt="service 3">
+                    <h3> VoIp/IP-PBX</h3>
+                </div>
+                <div class="col-4">
+                    <img src="images/webd.jpeg" alt="service 4">
+                    <h3>Web design</h3>
+                </div>
+                <div class="col-4">
+                    <img src="images/cloud.jpeg" alt="service 4">
+                    <h3>Cloud Computing</h3>
+                </div>
+                <div class="col-4">
+                    <img src="images/data.jpeg" alt="service 4">
+                    <h3> Data Analyse</h3>
+                </div>
+                <div class="col-4">
+                    <img src="images/assis.jpeg" alt="service 4">
+                    <h3> Assistance Informatique</h3>
+                </div>
+                <div class="col-4">
+                    <img src=" " alt="service 4">
+                    <h3>ok</h3>
+                </div>
+            </div>
+            <!--  -->
+            </div>
+
+            <div class="pagination">
+                <span>1</span>
+                <span>2</span>
+                <span>&#8594;</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- footer de la page -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer">
+                <p>By Foko_Junior.</p>
+                <ul class="socials">
+                    <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="https://wa.me/690713130"><i class="fa fa-whatsapp"></i></a></li>
+                    <li><a href="#"><i class="fa fa-telegram"></i></a></li>
+                    <li><a href="#"><i class="fa fa-github"></i></a></li>
+                    <li><a href="#"><i class="fa fa-linkedin-square"></i></a></li>
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                </ul>
+            </div>
+            <hr>
+            <p class="copyright">Copyrigth &copy; Junior 2023</p>
+        </div>
+    </footer>
+
+    <!-- javascript code -->
+    <script>
+        var menuItems = document.getElementById('menuItems');
+
+        menuItems.style.maxHeight = '0px';
+        menuItems.style.padding   = '0px';
+
+        function toogleButton(){
+            if(menuItems.style.maxHeight == '0px'){
+                menuItems.style.maxHeight = '200px';
+                menuItems.style.padding   = '15px';
+            }else{
+                menuItems.style.maxHeight = '0px';
+                menuItems.style.padding   = '0px';
+            }
+        }
+    </script>
+</body>
+</html>
